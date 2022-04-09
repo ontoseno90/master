@@ -1,0 +1,22 @@
+#! /bin/bash
+
+ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
+
+apt-get update -y 
+
+apt-get update 
+
+apt-get update --allow-releaseinfo-change && apt-get upgrade -y && apt-get update
+
+apt-get install -y tasksel
+
+tasksel install xubuntu-core 
+
+apt-get install -y xrdp ssl-cert tigervnc-standalone-server tigervnc-common
+
+adduser xrdp ssl-cert
+
+systemctl set-default graphical.target
+
+systemctl reboot
+
