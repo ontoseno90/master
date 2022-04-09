@@ -14,8 +14,6 @@ tasksel install xubuntu-core
 
 apt-get install -y xrdp ssl-cert tigervnc-standalone-server tigervnc-common
 
-adduser xrdp ssl-cert
-
 systemctl set-default graphical.target
 
 systemctl reboot
