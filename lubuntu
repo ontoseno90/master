@@ -18,12 +18,6 @@ ufw allow 3389
 
 systemctl set-default graphical.target
 
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-
-dpkg -i google-chrome*.deb
-
-apt-get install -y -f
-
 pip3 install requests selenium webdriver-manager undetected-chromedriver pyvirtualdisplay
 
 systemctl restart xrdp
