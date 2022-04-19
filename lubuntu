@@ -18,7 +18,9 @@ ufw allow 3389
 
 systemctl set-default graphical.target
 
-pip3 install requests selenium webdriver-manager undetected-chromedriver pyvirtualdisplay
+pip3 install selenium webdriver-manager undetected-chromedriver requests pyvirtualdisplay
+
+pip3 install -U selenium webdriver-manager undetected-chromedriver requests pyvirtualdisplay
 
 systemctl restart xrdp
 
