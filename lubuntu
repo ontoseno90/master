@@ -16,7 +16,7 @@ chmod +x swap2gb
 
 apt-get install -y curl htop 
 
-apt-get install -y jq python3 python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools xvfb
+apt-get install -y jq python3 python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools xvfb gnupg
 
 apt-get install -y xfce4 xfce4-goodies xorg dbus-x11 x11-xserver-utils tigervnc-standalone-server tigervnc-common
 
@@ -32,11 +32,15 @@ pip3 install -U selenium webdriver-manager undetected-chromedriver requests pyvi
 
 systemctl restart xrdp
 
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+#wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+#dpkg -i google-chrome*.deb
+#apt-get install -y -f
 
-dpkg -i google-chrome*.deb
+echo "deb http://download.webmin.com/download/repository sarge contrib" >> /etc/apt/sources.list
 
-apt-get install -y -f
+wget -q -O- http://www.webmin.com/jcameron-key.asc | apt-key add && apt-get update && apt-get install apt-transport-https
+
+apt-get install -y webmin
 
 reboot
 
