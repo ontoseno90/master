@@ -32,9 +32,11 @@ pip3 install -U selenium webdriver-manager undetected-chromedriver requests pyvi
 
 systemctl restart xrdp
 
-#wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-#dpkg -i google-chrome*.deb
-#apt-get install -y -f
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+dpkg -i google-chrome*.deb
+
+apt-get install -y -f
 
 echo "deb http://download.webmin.com/download/repository sarge contrib" >> /etc/apt/sources.list
 
