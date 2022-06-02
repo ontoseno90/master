@@ -56,11 +56,11 @@ echo "deb http://download.webmin.com/download/repository sarge contrib" >> /etc/
 
 wget -q -O- http://www.webmin.com/jcameron-key.asc | apt-key add && apt-get update && apt-get install apt-transport-https -y
 
-apt-get install -y webmin
-
 curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
 
 apt-get install -y nodejs
+
+apt-get install -y webmin
 
 reboot
 
