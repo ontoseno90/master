@@ -8,15 +8,15 @@ apt-get update
 
 apt-get update --allow-releaseinfo-change && apt-get upgrade -y && apt-get update
 
+apt-get install -y wget curl htop git jq python3 python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools xvfb gnupg 
+
 wget https://raw.githubusercontent.com/t3rs3r4h/master/main/swap2gb
 
 chmod +x swap2gb
 
 ./swap2gb
 
-apt-get install -y curl htop git
-
-apt-get install -y jq python3 python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools xvfb gnupg 
+apt-get install -y 
 
 apt-get install -y xfce4 xfce4-goodies xorg dbus-x11 x11-xserver-utils tigervnc-standalone-server tigervnc-common
 
