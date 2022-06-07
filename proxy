@@ -4,19 +4,19 @@ apt-get install iproute2 -y
 myIP=$(ip addr | grep -Po '(?!(inet 127.\d.\d.1))(inet \K(\d{1,3}\.){3}\d{1,3})')
 echo "ok.. please wait a few minute!"
 sleep 3
-sudo apt-get update -y
-sudo apt-get install make gcc -y
-sudo apt-get install mc -y
-sudo apt-get install curl -y
-sudo apt-get install build-essential -y
-sudo wget https://www.inet.no/dante/files/dante-1.4.3.tar.gz
-sudo gunzip dante-1.4.3.tar.gz
-sudo tar -xf dante-1.4.3.tar
+apt-get update -y
+apt-get install make gcc -y
+apt-get install mc -y
+apt-get install curl -y
+apt-get install build-essential -y
+wget https://www.inet.no/dante/files/dante-1.4.3.tar.gz
+gunzip dante-1.4.3.tar.gz
+tar -xf dante-1.4.3.tar
 cd dante-1.4.3/
-sudo ./configure
-sudo make
-sudo make install
-sudo bash -c "cat <<EOF > /etc/danted.conf
+./configure
+make
+make install
+bash -c "cat <<EOF > /etc/danted.conf
 logoutput: syslog
 internal: $myIP port = 1990
 external: $myIP
@@ -39,16 +39,16 @@ block {
 }
 EOF"
 
-sudo bash -c "cat <<EOF > /etc/sockd.sh
+bash -c "cat <<EOF > /etc/sockd.sh
 #! /bin/sh
-sudo /usr/local/sbin/sockd -D -N 2 -f /etc/danted.conf
+/usr/local/sbin/sockd -D -N 2 -f /etc/danted.conf
 EOF"
 
-sudo chmod +x /etc/sockd.sh
+chmod +x /etc/sockd.sh
 
-sudo crontab -l | { cat; echo '@reboot /etc/sockd.sh'; } | crontab -
+crontab -l | { cat; echo '@reboot /etc/sockd.sh'; } | crontab -
 
-sudo /usr/local/sbin/sockd -D -N 2 -f /etc/danted.conf
+/usr/local/sbin/sockd -D -N 2 -f /etc/danted.conf
 
 tail /var/log/syslog
 
