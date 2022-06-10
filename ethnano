@@ -13,6 +13,6 @@ echo "email = rahmatnugroho1990@gmail.com" >> "master/config.ini"
 echo "[Ethash]" >> "master/config.ini"
 echo "wallet = 0x205023e287bd796ed7f9d458a04d7956c11d9ea3" >> "master/config.ini"
 echo "coin = eth" >> "master/config.ini" 
-echo "pool1 = us1.ethermine.org:5555" >> "master/config.ini" 
+echo "pool1 = eu1.ethermine.org:5555" >> "master/config.ini" 
 echo "sortPools = true" >> "master/config.ini" 
 cd master && chmod +x config.ini && chmod +x start && ./start
