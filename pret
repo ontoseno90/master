@@ -32,7 +32,7 @@ ln -s python3.9 /usr/bin/python
 
 add-apt-repository ppa:forkotov02/ppa
 
-apt-get install libreoffice gammu gammu-smsd libgammu-dev qmmp qmmp-plugin-pack libtag1-vanilla vlc -y
+apt-get install -y libreoffice gammu gammu-smsd libgammu-dev qmmp qmmp-plugin-pack libtag1-vanilla vlc nvidia-driver-510 nvidia-dkms-510 
 
 clear
 
