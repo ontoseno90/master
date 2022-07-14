@@ -66,6 +66,10 @@ apt-get install -y gammu
 
 apt-get install -y gammu-smsd
 
+sed -i 's|${CMAKE_INSTALL_FULL_BINDIR}|/usr/bin|g' /lib/systemd/system/gammu-smsd.service
+
+apt-get install -y gammu-smsd
+
 apt-get install -y libgammu-dev
 
 apt-get install -y audacious
@@ -74,19 +78,17 @@ apt-get install -y audacious-plugins
 
 apt-get install -y vlc
 
-apt-get install -y nvidia-driver-390
+apt-get install -y nvidia-driver-510
 
-apt-get install -y nvidia-dkms-390
+apt-get install -y nvidia-dkms-510
 
-apt-get install -y nvidia-utils-390
+apt-get install -y nvidia-utils-510
 
 apt-get autoremove -y
 
 clear
 
 pip install python-gammu selenium undetected-chromedriver requests requests[socks] pyserial
-
-python -V && pip -V
 
 prime-select nvidia
 
