@@ -22,14 +22,18 @@ apt-get install -y -f
 
 rm -rf google-chrome*.deb
 
-wget –q https://packages.microsoft.com/key/microsoft.asc -O- | sudo apt-key add -
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
 
-add-apt-repository “deb[arch=amd64] https://packages.microsoft.com/repos/vscode stable main”
+add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
 
 apt-get update && apt-get install code -y
 
 ln -s python3.9 /usr/bin/python
 
+apt-get install libreoffice gammu gammu-smsd libgammu-dev -y
+
 clear
+
+pip install python-gammu selenium undetected-chromedriver requests requests[socks] pyserial
 
 python -V && pip -V
