@@ -6,14 +6,6 @@ ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 
 apt-get update
 
-apt-get update -y
-
-apt-get update --allow-releaseinfo-change 
-
-apt-get upgrade -y 
-
-apt-get update
-
 apt-get install -y wget curl htop git jq
 
 apt-get install -y python3.9
@@ -78,18 +70,10 @@ apt-get install -y audacious-plugins
 
 apt-get install -y vlc
 
-apt-get install -y nvidia-driver-510
-
-apt-get install -y nvidia-dkms-510
-
-apt-get install -y nvidia-utils-510
-
 apt-get autoremove -y
 
 clear
 
 pip install python-gammu selenium undetected-chromedriver requests requests[socks] pyserial
-
-prime-select nvidia
 
 reboot
