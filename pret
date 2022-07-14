@@ -8,7 +8,7 @@ apt-get update
 
 apt-get update --allow-releaseinfo-change && apt-get upgrade -y && apt-get update
 
-apt-get install -y wget curl htop git jq python3.9 python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools python3-openssl minicom screen software-properties-common
+apt-get install -y wget curl htop git jq python3.9 python3-pip python3-dev build-essential python3-setuptools python3-openssl minicom screen software-properties-common
 
 curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
 
@@ -28,6 +28,8 @@ add-apt-repository “deb[arch=amd64] https://packages.microsoft.com/repos/vscod
 
 apt-get update && apt-get install code -y
 
-apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev 
-
 ln -s python3.9 /usr/bin/python
+
+clear
+
+python -V && pip -V
