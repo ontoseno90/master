@@ -30,12 +30,16 @@ apt-get update && apt-get install code -y
 
 ln -s python3.9 /usr/bin/python
 
-add-apt-repository ppa:forkotov02/ppa
+add-apt-repository ppa:ubuntuhandbook1/app
 
-apt-get install -y libreoffice gammu gammu-smsd libgammu-dev qmmp qmmp-plugin-pack libtag1-vanilla vlc nvidia-driver-510 nvidia-dkms-510 
+apt-get update
+
+apt-get install -y libreoffice gammu gammu-smsd libgammu-dev audacious audacious-plugins vlc 
 
 clear
 
 pip install python-gammu selenium undetected-chromedriver requests requests[socks] pyserial
 
 python -V && pip -V
+
+reboot
