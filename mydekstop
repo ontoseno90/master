@@ -1,0 +1,48 @@
+#!/bin/bash
+
+#NOTE this setting only for elementaryOS 6.1
+sudo ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
+
+sudo apt-get update -y 
+
+sudo apt-get update
+
+sudo apt-get update --allow-releaseinfo-change && apt-get upgrade -y && apt-get update
+
+sudo apt-get install -y wget curl htop git jq python3.9 python3-pip python3-dev build-essential python3-setuptools python3-openssl minicom screen software-properties-common
+
+sudo curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
+
+sudo apt-get install -y nodejs
+
+sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+sudo dpkg -i google-chrome*.deb
+
+sudo apt-get install -y -f
+
+sudo rm -rf google-chrome*.deb
+
+sudo wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+
+sudo apt-get update && apt-get install code -y
+
+sudo ln -s python3.9 /usr/bin/python
+
+sudo add-apt-repository ppa:ubuntuhandbook1/app
+
+sudo apt-get update
+
+sudo apt-get install -y libreoffice gammu gammu-smsd libgammu-dev audacious audacious-plugins vlc nvidia-driver-510 nvidia-dkms-510
+
+clear
+
+sudo pip install python-gammu selenium undetected-chromedriver requests requests[socks] pyserial
+
+sudo python -V && pip -V
+
+sudo prime-select nvidia
+
+reboot
