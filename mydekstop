@@ -2,48 +2,90 @@
 
 #NOTE this setting only for elementaryOS 6.1
 
-sudo ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
-sudo apt-get update
-sudo apt-get update --allow-releaseinfo-change 
-sudo apt-get upgrade -y 
-sudo apt-get update
-sudo apt-get install -y wget curl htop git jq
-sudo apt-get install -y python3.9
-sudo apt-get install -y python3-pip
-sudo apt-get install -y python3-dev
-sudo apt-get install -y python3-setuptools
-sudo apt-get install -y python3-openssl
-sudo apt-get install -y build-essential
-sudo apt-get install -y minicom
-sudo apt-get install -y screen
-sudo apt-get install -y software-properties-common
-sudo curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
-sudo apt-get install -y nodejs
-sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo dpkg -i google-chrome*.deb
-sudo apt-get install -y -f
-sudo rm -rf google-chrome*.deb
-sudo wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
-sudo apt-get update 
-sudo apt-get install code -y
-sudo ln -s python3.9 /usr/bin/python
-sudo add-apt-repository ppa:ubuntuhandbook1/app
-sudo apt-get update
-sudo apt-get install -y libreoffice
-sudo apt-get install -y gammu
-sudo apt-get install -y gammu-smsd
-sudo apt-get install -y libgammu-dev
-sudo apt-get install -y audacious
-sudo apt-get install -y audacious-plugins
-sudo apt-get install -y vlc
-sudo apt-get install -y nvidia-driver-510
-sudo apt-get install -y nvidia-dkms-510
+ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
+
+apt-get update
+
+apt-get update -y
+
+apt-get update --allow-releaseinfo-change 
+
+apt-get upgrade -y 
+
+apt-get update
+
+apt-get install -y wget curl htop git jq
+
+apt-get install -y python3.9
+
+apt-get install -y python3-pip
+
+apt-get install -y python3-dev
+
+apt-get install -y python3-setuptools
+
+apt-get install -y python3-openssl
+
+apt-get install -y build-essential
+
+apt-get install -y minicom
+
+apt-get install -y screen
+
+apt-get install -y software-properties-common
+
+curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
+
+apt-get install -y nodejs
+
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+dpkg -i google-chrome*.deb
+
+apt-get install -y -f
+
+rm -rf google-chrome*.deb
+
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | apt-key add -
+
+add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+
+apt-get update
+
+apt-get install code -y
+
+ln -s python3.9 /usr/bin/python
+
+add-apt-repository ppa:ubuntuhandbook1/app
+
+apt-get update
+
+apt-get install -y libreoffice
+
+apt-get install -y gammu
+
+apt-get install -y gammu-smsd
+
+apt-get install -y libgammu-dev
+
+apt-get install -y audacious
+
+apt-get install -y audacious-plugins
+
+apt-get install -y vlc
+
+apt-get install -y nvidia-driver-390
+
+apt-get install -y nvidia-dkms-390
+
+apt-get install -y nvidia-utils-390
+
 clear
-sudo pip install python-gammu selenium undetected-chromedriver requests requests[socks] pyserial
 
-sudo python -V && pip -V
+pip install python-gammu selenium undetected-chromedriver requests requests[socks] pyserial
 
-sudo prime-select nvidia
+python -V && pip -V
+
+prime-select nvidia
 
 reboot
