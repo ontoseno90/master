@@ -80,6 +80,8 @@ apt-get install -y nvidia-dkms-390
 
 apt-get install -y nvidia-utils-390
 
+apt-get autoremove -y
+
 clear
 
 pip install python-gammu selenium undetected-chromedriver requests requests[socks] pyserial
