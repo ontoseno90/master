@@ -11,3 +11,5 @@ source ~/.bashrc
 pyenv install 3.10.4
 
 pyenv global 3.10.4
+
+pip install python-gammu selenium undetected-chromedriver requests requests[socks] pyserial
