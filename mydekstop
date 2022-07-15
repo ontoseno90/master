@@ -42,9 +42,7 @@ sudo add-apt-repository ppa:ubuntuhandbook1/app
 
 sudo apt-get update
 
-sudo apt-get install -y code nodejs
-
-sudo add-apt-repository ppa:ubuntuhandbook1/appapt-get install -y libreoffice
+sudo apt-get install -y code nodejs libreoffice
 
 sudo apt-get install -y gammu gammu-smsd libgammu-dev libgammu8 libgammu-i18n
 
