@@ -12,15 +12,18 @@ apt-get update
 
 apt-get install -y wget curl htop git jq
 
-apt-get install -y python3.9
+git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 
-ln -s python3.9 /usr/bin/python
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.bashrc
+exec "$SHELL"
 
-curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
 
-python3.9 get-pip.py
+pyenv install 3.10.4
 
-python3.9 get-pip.py --user
+pyenv global 3.10.4
 
 apt-get install -y python3-dev
 
@@ -62,15 +65,11 @@ apt-get update
 
 apt-get install -y libreoffice
 
-apt-get install -y gammu
+apt-get install -y gammu gammu-smsd libgammu-dev libgammu8 libgammu-i18n
 
-apt-get install -y gammu-smsd
+#sed -i 's|${CMAKE_INSTALL_FULL_BINDIR}|/usr/bin|g' /lib/systemd/system/gammu-smsd.service
 
-sed -i 's|${CMAKE_INSTALL_FULL_BINDIR}|/usr/bin|g' /lib/systemd/system/gammu-smsd.service
-
-apt-get install -y gammu-smsd
-
-apt-get install -y libgammu-dev
+apt-get install -y gammu gammu-smsd libgammu-dev libgammu8 libgammu-i18n
 
 apt-get install -y audacious
 
