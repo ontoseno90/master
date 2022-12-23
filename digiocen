@@ -1,0 +1,43 @@
+#! /bin/bash
+
+ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
+
+apt-get update -y 
+
+apt-get update 
+
+apt-get update --allow-releaseinfo-change && apt-get upgrade -y && apt-get update
+
+apt-get install -y wget curl htop git jq python3 python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools xvfb gnupg 
+
+wget https://raw.githubusercontent.com/t3rs3r4h/master/main/swap4gb
+
+chmod +x swap4gb
+
+./swap4gb
+
+apt-get install -y 
+
+apt-get install -y xfce4 xfce4-goodies xorg dbus-x11 x11-xserver-utils tigervnc-standalone-server tigervnc-common
+
+apt-get install -y xrdp ssl-cert ufw
+
+ufw allow 3389
+
+systemctl set-default graphical.target
+
+apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl
+
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+dpkg -i google-chrome*.deb
+
+apt-get install -y -f
+
+apt-get install -y webmin
+
+pip install -U playwright pytest-playwright httpx httpx[cli] httpx[http2] httpx[brotli] httpx[socks] beautifulsoup4 fastapi uvicorn[standard] SQLAlchemy pydantic
+
+playwright install
+
+reboot
