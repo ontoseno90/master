@@ -28,7 +28,7 @@ systemctl set-default graphical.target
 
 apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev 
 
-pip3 install -U requests playwright pytest-playwright httpx httpx[cli] httpx[http2] httpx[brotli] httpx[socks] beautifulsoup4
+pip3 install -U requests playwright pytest-playwright httpx httpx[cli] httpx[http2] httpx[brotli] httpx[socks] beautifulsoup4 pandas
 
 playwright install
 
