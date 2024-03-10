@@ -48,9 +48,9 @@ echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n eval "$(pyenv init -)"\nfi
 
 exec "$SHELL"
 
-pyenv install 3.9.7
+pyenv install 3.10.4
 
-pyenv global 3.9.7
+pyenv global 3.10.4
 
 pip install -U playwright pytest-playwright httpx httpx[cli] httpx[http2] httpx[brotli] httpx[socks] beautifulsoup4 fastapi uvicorn[standard] SQLAlchemy pydantic pandas lxml
 
